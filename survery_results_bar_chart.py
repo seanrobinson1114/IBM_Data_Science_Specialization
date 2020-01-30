@@ -36,7 +36,7 @@ plt.gca().axes.get_yaxis().set_visible(False)
 
 # add labels to each bar
 for p in ax.patches:
-    ax.annotate(str(p.get_height()), (p.get_x() + 0.055, p.get_height() + 0.005))
+    ax.annotate(str(int(round(p.get_height() * 100)))+"%", (p.get_x() + 0.055, p.get_height() + 0.005))
 
 # ensure fits in window
 plt.tight_layout()
